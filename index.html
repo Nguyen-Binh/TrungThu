@@ -207,8 +207,8 @@
 .corner-gallery{
    position: fixed;   /* hoặc absolute cũng được, nhưng fixed nhìn ổn hơn khi viewport đổi */
   top: 30px;
-  right: 150px;
-  left: auto;        /* nhớ reset left */
+  left: 30px;
+  right: auto;       
   width: 300px;
   aspect-ratio: 4 / 3;
   border: 2px solid rgba(255,255,255,0.18);
@@ -236,9 +236,9 @@
 @media (max-width:600px){
   .corner-gallery{
     width: 40vw;
-    right: 144px;
+    left: 24px;
     top: 26px;
-    left: auto;
+    right: auto;
   }
 }
 
@@ -540,6 +540,7 @@ const cornerImages = [
 </body>
 
 </html>
+
 
 
 
