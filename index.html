@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Trung Thu có em</title>
+    <title>Trung Thu</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
@@ -203,7 +203,7 @@
                 height: 20px;
             }
         }
-        /* === Góc trái: khung slideshow hình ảnh === */
+            /* === Góc trái: khung slideshow hình ảnh === */
 .corner-gallery{
    position: absolute;
   left: 18px;
@@ -246,10 +246,10 @@
 <body>
     <div class="stage">
         <canvas id="starfield"></canvas>
-        
-<div class="corner-gallery" aria-label="Slideshow góc trái">
+        <div class="corner-gallery" aria-label="Slideshow góc trái">
   <img id="corner-slide" alt="Trung Thu slideshow" />
 </div>
+
 
         <div class="moon" aria-hidden="true"></div>
 
@@ -261,7 +261,7 @@
             <!-- <img src="./ass.png" alt="Trang trí Trung Thu" /> -->
         </div>
 
-        <!-- Sửa phần hướng dẫn ở đây -->
+        <!-- Sử phần hướng dẫn ở đây -->
         <div id="hint">Chạm vào đèn trời nhé em !!!</div>
 
         <!-- Nhạc sửa nhạc nền -->
@@ -357,15 +357,16 @@
 
         // ===== Đèn lồng và lời chúc =====
         const lanternContainer = document.getElementById("lantern-container");
-        //Sửa lời chúc ở đây
+        //Sử lời chúc ở đây
         const wishes = [
             "Chúc em Trung Thu ấm áp, hạnh phúc!",
             "Chúc em luôn sáng như trăng rằm!",
-            "Chúc cho mọi mong ước của em đều thành hiện thực!"
+            "Chúc cho mọi mong ước của em đều thành hiện thực!",
             "Chúc đại gia đình em luôn vui vẻ, hạnh phúc!",
             "Cảm ơn em vì tất cả :D",
             "TRUNG THU THIÊN HẠ RƯỚC ĐÈN, CÒN ANH CHỈ MUỐN RƯỚC EM VỀ NHÀ :D",
         ];
+        let wishIndex = 0; // <--- thêm dòng này
 
         function createLantern() {
             const lantern = document.createElement("img");
@@ -409,12 +410,14 @@
 
             setTimeout(() => lantern.remove(), duration);
 
-            lantern.addEventListener("click", (e) => {
-                e.stopPropagation();
-                const wishPopup = document.getElementById("wish-popup");
-                wishPopup.textContent = wishes[Math.floor(Math.random() * wishes.length)];
-                wishPopup.style.display = "block";
-            });
+           lantern.addEventListener("click", (e) => {
+  e.stopPropagation();
+  const wishPopup = document.getElementById("wish-popup");
+  wishPopup.textContent = wishes[wishIndex]; // <--- thay Math.random()... bằng chỉ số
+  wishPopup.style.display = "block";
+  wishIndex = (wishIndex + 1) % wishes.length; // <--- thêm dòng này để quay vòng
+});
+
         }
 
         setInterval(createLantern, 500);
@@ -488,7 +491,7 @@
                 }
             }, 5000);
         }, 1000);
-        // === Slideshow góc trái ===
+              // === Slideshow góc trái ===
 // Thay các link ảnh của bạn tại đây:
 const cornerImages = [
   "https://nguyen-binh.github.io/TrungThu/1.jpg", // ví dụ dùng luôn đèn lồng
@@ -530,14 +533,8 @@ const cornerImages = [
   // Tự động chuyển ảnh mỗi 3.5s
   setInterval(showNext, 3500);
 })();
-
     </script>
 
 </body>
 
-
 </html>
-
-
-
-
