@@ -207,7 +207,7 @@
 .corner-gallery{
   position: fixed;
   left: 18px;
-  top: 90px;              /* tránh trùng khu vực .controls nếu bạn thêm sau này */
+  top: 18px;              /* tránh trùng khu vực .controls nếu bạn thêm sau này */
   width: 220px;
   aspect-ratio: 4 / 3;
   border: 2px solid rgba(255,255,255,0.18);
@@ -369,7 +369,7 @@
         function createLantern() {
             const lantern = document.createElement("img");
             // sửa đèn lồng ở đây
-            lantern.src = "https://uploads.onecompiler.io/43n2pjfqw/43n2q84vp/den.png";
+            lantern.src = "./den.png";
             lantern.className = "lantern swing";
 
             const layer = Math.floor(Math.random() * 3) + 1;
@@ -490,8 +490,16 @@
         // === Slideshow góc trái ===
 // Thay các link ảnh của bạn tại đây:
 const cornerImages = [
-  "https://uploads.onecompiler.io/43n2pjfqw/43n2q84vp/11.jpg", // ví dụ dùng luôn đèn lồng
-  "https://uploads.onecompiler.io/43n2pjfqw/43n2q84vp/2.png",
+  "./1.jpg", // ví dụ dùng luôn đèn lồng
+  "./2.jpg",
+  "./3.jpg",
+    "./4.jpg",
+    "./5.jpg",
+    "./6.jpg",
+    "./7.jpg",
+    "./8.jpg",
+    "./9.jpg",
+    "./10.jpg",
 ];
 
 (function initCornerSlideshow(){
@@ -528,3 +536,4 @@ const cornerImages = [
 
 
 </html>
+
