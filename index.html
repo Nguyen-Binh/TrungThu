@@ -205,9 +205,10 @@
         }
             /* === Góc trái: khung slideshow hình ảnh === */
 .corner-gallery{
-    position: fixed;
+   position: fixed;   /* hoặc absolute cũng được, nhưng fixed nhìn ổn hơn khi viewport đổi */
+  top: 30px;
   right: 330px;
-  top: 30px;              /* tránh trùng khu vực .controls nếu bạn thêm sau này */
+  left: auto;        /* nhớ reset left */
   width: 368px;
   aspect-ratio: 4 / 3;
   border: 2px solid rgba(255,255,255,0.18);
@@ -235,8 +236,9 @@
 @media (max-width:600px){
   .corner-gallery{
     width: 36vw;
-    top: 76px;
-    left: 12px;
+    right: 324px;
+    top: 26px;
+    left: auto;
   }
 }
 
@@ -538,6 +540,7 @@ const cornerImages = [
 </body>
 
 </html>
+
 
 
 
