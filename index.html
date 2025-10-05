@@ -205,9 +205,9 @@
         }
         /* === Góc trái: khung slideshow hình ảnh === */
 .corner-gallery{
-  position: fixed;
+   position: absolute;
   left: 18px;
-  top: 18px;              /* tránh trùng khu vực .controls nếu bạn thêm sau này */
+  top: 60px;              /* tránh trùng khu vực .controls nếu bạn thêm sau này */
   width: 220px;
   aspect-ratio: 4 / 3;
   border: 2px solid rgba(255,255,255,0.18);
@@ -261,7 +261,7 @@
             <!-- <img src="./ass.png" alt="Trang trí Trung Thu" /> -->
         </div>
 
-        <!-- Sử phần hướng dẫn ở đây -->
+        <!-- Sửa phần hướng dẫn ở đây -->
         <div id="hint">Chạm vào đèn trời nhé em !!!</div>
 
         <!-- Nhạc sửa nhạc nền -->
@@ -357,7 +357,7 @@
 
         // ===== Đèn lồng và lời chúc =====
         const lanternContainer = document.getElementById("lantern-container");
-        //Sử lời chúc ở đây
+        //Sửa lời chúc ở đây
         const wishes = [
             "Chúc em Trung Thu ấm áp, hạnh phúc!",
             "Chúc em luôn sáng như trăng rằm!",
@@ -537,5 +537,6 @@ const cornerImages = [
 
 
 </html>
+
 
 
